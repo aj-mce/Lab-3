@@ -1,0 +1,45 @@
+		import java.util.Scanner;
+		
+public class VowelCounter {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		
+		//prompting and reading user input
+		System.out.println("Type your text, then press Enter: ");
+		String s = scan.nextLine();
+
+		//define counters for each lower-case vowel and all non-vowel characters
+		int countA=0;
+		int countE=0;
+		int countI=0;
+		int countO=0;
+		int countU=0;
+		int countNV=0;
+
+		//defining counter for total number of characters
+		int countAll = s.length();
+
+		//loop all characters from the user string and adding each to the appropriate counters (here capital vowels are added to the non-vowel count)
+		for (int k=0;k<countAll;k++) {
+		char ch=s.charAt(k);
+		if (ch=='a') countA++;
+		else if (ch=='e') countE++;
+		else if (ch=='i') countI++;
+		else if (ch=='o') countO++;
+		else if (ch=='u') countU++;
+		else if (ch!='A' && ch!='E' && ch!='I' && ch!='O' && ch!='U')
+		countNV++;
+		}
+
+		//output (count of each lower-case vowel and non-vowel characters)
+		System.out.println("'a' appears "+countA+" times");
+		System.out.println("'e' appears "+countE+" times");
+		System.out.println("'i' appears "+countI+" times");
+		System.out.println("'o' appears "+countO+" times");
+		System.out.println("'u' appears "+countU+" times");
+		System.out.println("non-vowels appear "+countNV+" times");
+	}
+
+}
