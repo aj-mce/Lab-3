@@ -41,9 +41,7 @@ public class AgeGuess {
 
                 //when guessed number is equal to random number
                 else {
-                    System.out.println("Correct! ");
-                    System.out.println ("Name: "+ name);
-                    System.out.println ("Age: "+ age);
+                    System.out.println("Correct!" + name + " is " +age);
 
                     //breaking the loop
                     break;
